@@ -23,3 +23,16 @@ def print_topl_statistics(y_true, y_pred):
     auprc = average_precision_score(y_true, y_pred)
     
     print(f"Top k Accuracies: [{topkl_accuracy[0]:.4f}, {topkl_accuracy[1]:.4f}, {topkl_accuracy[2]:.4f},{topkl_accuracy[3]:.4f}], AUPRC: {auprc:.4f}")
+
+def one_hot_encode_sequence(seq):
+
+    map = np.asarray([[0, 0, 0, 0],
+                      [1, 0, 0, 0],
+                      [0, 1, 0, 0],
+                      [0, 0, 1, 0],
+                      [0, 0, 0, 1]])
+
+    seq = seq.upper().replace('A', '\x01').replace('C', '\x02')
+    seq = seq.replace('G', '\x03').replace('T', '\x04').replace('N', '\x00')
+
+    return map[np.fromstring(seq, np.int8) % 5]

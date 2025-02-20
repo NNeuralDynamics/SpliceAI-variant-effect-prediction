@@ -31,13 +31,7 @@ model = [[] for v in range(len(version))]
 
 
 for v in range(len(version)):
-    model[v] = load_model('../Models/SpliceAI_' +version+ '_' + sys.argv[1] +'c_'+ v + '.h5'', custom_objects={'categorical_crossentropy_2d': categorical_crossentropy_2d})
-
-
-
-###############################################################################
-# Model testing
-###############################################################################
+    model[v] = load_model('../Models/SpliceAI_' +version+ '_' + sys.argv[1] +'c_'+ v + '.h5'', custom_objects={'categorical_crossentropy_2d': categorical_crossentropy_2d}')
 
 start_time = time.time()
 
@@ -91,5 +85,4 @@ h5f.close()
 print("--- %s seconds ---" % (time.time() - start_time))
 print("--------------------------------------------------------------")
 
-###############################################################################
 
