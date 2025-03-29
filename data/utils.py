@@ -6,11 +6,7 @@ datafile_{}_{}.h5 and convert them into a format usable by Keras.'''
 import numpy as np
 import re
 from math import ceil
-from sklearn.metrics import average_precision_score
 from constants import *
-import time
-import gzip
-import tensorflow as tf
 
 
 assert CL_max % 2 == 0
