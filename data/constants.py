@@ -15,4 +15,4 @@ data_dir='./'
 sequence='canonical_sequence_hg38.txt' #change name for hg38
 # Output details
 
-version = "hg38"
+version="hg38"
