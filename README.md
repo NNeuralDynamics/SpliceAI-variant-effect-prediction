@@ -16,20 +16,9 @@ Firstly, Update the constants.py file:
 - sequence: for sequence name
 - version: is used for naming the file
 
-Then, download the appropriate genome FASTA file for your dataset.
-```sh
-cd data
-```
-For GRCh37/hg19
-```sh
-!wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz
-```
-Or for GRCh38/hg38
-```sh
-!wget http://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
-```
+__Download fasta file and prepare datasets__ Finally, use the following commands for data preprocessing:
 
-Finally, use the following commands for data preprocessing:
+- Modify ```data/constants.py``` to point to the correct version of the genome.
 
 ```sh
 cd data/
