@@ -1,6 +1,11 @@
 #!/bin/bash
-module load bedtools
+
+# uncomment if bedtools is available as a module
+# module load bedtools
 source constants.py
+
+wget http://hgdownload.cse.ucsc.edu/goldenPath/$version/bigZips/$version.fa.gz
+gunzip $version.fa.gz
 
 CLr=$((CL_max/2))
 CLl=$(($CLr+1))
